@@ -2,7 +2,10 @@ import React from 'react';
 import { mapProps } from 'recompose';
 
 const Comp = ({ num, text }) => (
-  <div>NUM: {num} TEXT: {text}</div>
+  <div>
+    <strong>NUM:</strong> {num} <br />
+    <strong>TEXT:</strong> {text} <br />
+  </div>
 );
 
 // the mapProps below maps the ownerProps and returns a modified props,

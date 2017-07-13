@@ -4,6 +4,7 @@ import './App.css';
 
 import MapPropsExample from './components/MapPropsExample';
 import WithPropsExample from './components/WithPropsExample';
+import DefaultPropsExample from './components/DefaultPropsExample';
 
 const Section = ({ label, desc }) => (
   <div className="section">
@@ -29,6 +30,10 @@ class App extends Component {
 
           <Section label={'withProps()'} desc={'Like mapProps(), except the newly created props are merged with the owner props.'} />
           <WithPropsExample num={2} text={'a string prop'} />
+
+          <Section label={'defaultProps()'} desc={'Specifies props to be passed by default to the base component. Similar to withProps(), except the props from the owner take precedence over props provided to the HoC.'} />
+          <DefaultPropsExample num={3} text={'owner\'s string prop'} />
+          <DefaultPropsExample />
         </div>
       </div>
     );
