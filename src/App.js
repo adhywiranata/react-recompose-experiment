@@ -14,6 +14,8 @@ import WithStateAndPropsExample from './components/WithStateAndPropsExample';
 
 import LifeCycleExample from './components/LifeCycleExample';
 
+import BranchExample from './components/BranchExample';
+
 const Section = ({ label, desc }) => (
   <div className="section">
     <h4>{label}</h4>
@@ -67,8 +69,15 @@ class App extends Component {
 
           <h3>LifeCycle</h3>
 
-          <Section label={'lifecycle()'} desc={'composes two or more HOCs'} />
+          <Section label={'lifecycle()'} desc={'React lifecycle for stateless component'} />
           <LifeCycleExample />
+
+          <h3>Branching</h3>
+
+          <Section label={'branch()'} desc={'branching or conditions HOC'} />
+          <BranchExample showTrue />
+          <BranchExample showTrue={false} />
+          <BranchExample />
         </div>
       </div>
     );
