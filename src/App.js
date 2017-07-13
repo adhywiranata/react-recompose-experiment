@@ -12,6 +12,8 @@ import WithStateExample from './components/WithStateExample';
 
 import WithStateAndPropsExample from './components/WithStateAndPropsExample';
 
+import LifeCycleExample from './components/LifeCycleExample';
+
 const Section = ({ label, desc }) => (
   <div className="section">
     <h4>{label}</h4>
@@ -62,6 +64,11 @@ class App extends Component {
 
           <Section label={'compose()'} desc={'composes two or more HOCs'} />
           <WithStateAndPropsExample label={'this is a label props'} />
+
+          <h3>LifeCycle</h3>
+
+          <Section label={'lifecycle()'} desc={'composes two or more HOCs'} />
+          <LifeCycleExample />
         </div>
       </div>
     );
