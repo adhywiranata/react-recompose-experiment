@@ -4,6 +4,14 @@ import './App.css';
 
 import MapPropsExample from './components/MapPropsExample';
 
+const Section = ({ label, desc }) => (
+  <div className="section">
+    <h4>{label}</h4>
+    <p>
+      {desc}
+    </p>
+  </div>
+)
 class App extends Component {
   render() {
     return (
@@ -14,7 +22,7 @@ class App extends Component {
         </div>
         <div>
           <h3>HOCs</h3>
-          <h4>mapProps</h4>
+          <Section label={'mapProps'} desc={'Accepts a function that maps owner props to a new collection of props that are passed to the base component.'} />
           <MapPropsExample num={1} text={'a string prop'} />
         </div>
       </div>
