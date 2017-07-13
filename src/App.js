@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import MapPropsExample from './components/MapPropsExample';
+import WithPropsExample from './components/WithPropsExample';
 
 const Section = ({ label, desc }) => (
   <div className="section">
@@ -22,8 +23,12 @@ class App extends Component {
         </div>
         <div>
           <h3>HOCs</h3>
-          <Section label={'mapProps'} desc={'Accepts a function that maps owner props to a new collection of props that are passed to the base component.'} />
+
+          <Section label={'mapProps()'} desc={'Accepts a function that maps owner props to a new collection of props that are passed to the base component.'} />
           <MapPropsExample num={1} text={'a string prop'} />
+
+          <Section label={'withProps()'} desc={'Like mapProps(), except the newly created props are merged with the owner props.'} />
+          <WithPropsExample num={2} text={'a string prop'} />
         </div>
       </div>
     );
